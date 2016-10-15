@@ -23,6 +23,19 @@ Check your device's MIDI implementation chart.
 5. Wait until the script finishes
 6. Split the recorded audio into samples ([example on doing this automatically](https://rolodato.com/2016/10/14/emx-sample-pack.html))
 
+## Longest sample duration
+
+Before creating this, I had manually recorded all the samples once and exported them to individual files.
+I used the following script to sort the files by duration in order to find the longest one:
+
+```sh
+for i in *.wav; do
+	echo -n `ffmpeg -i "$i" 2>&1 | grep Duration`; echo "$i"
+done | sort
+```
+
+The longest file will be included in the last line of the output.
+
 ## Improvements
 
 This implementation is far from ideal but it suits my needs.
