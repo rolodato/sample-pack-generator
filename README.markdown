@@ -2,6 +2,8 @@
 
 ChucK script to sequentially play notes on a MIDI device, which can be used for sampling all sounds from a drum machine or any MIDI device.
 
+<img src="http://i.imgur.com/AKKAhkn.gif" width="800" />
+
 ## Requirements
 
 * ChucK available in PATH
